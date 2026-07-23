@@ -1,0 +1,17 @@
+// Last updated: 7/23/2026, 3:04:07 PM
+class Solution {
+    public int numJewelsInStones(String jewels, String stones) {
+        int count = 0;
+        for (int i = 0; i < stones.length(); i++) {
+            char ch = stones.charAt(i);
+            for (int j = 0; j < jewels.length(); j++) {
+                if (ch == jewels.charAt(j)) {
+                    count++;
+                    break; 
+                }
+            }
+        }
+
+        return count;
+    }
+}

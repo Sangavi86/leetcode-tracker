@@ -1,0 +1,21 @@
+// Last updated: 7/23/2026, 3:02:36 PM
+class Solution {
+    public int minOperations(String[] logs) {
+        int depth = 0;
+
+        for (String log : logs) {
+            if (log.equals("../")) {
+                if (depth > 0) {
+                    depth--;
+                }
+            } 
+            else if (log.equals("./")) {
+            } 
+            else {
+                depth++; 
+            }
+        }
+
+        return depth;
+    }
+}
